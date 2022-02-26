@@ -14,9 +14,8 @@ public class App extends Application {
         try {
             root = FXMLLoader.load(getClass().getResource("MainScene.fxml"));
             
-            
-            stage.setScene(new Scene(root));
             stage.setTitle("COQUUS");
+            stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {
             // TODO Auto-generated catch block
