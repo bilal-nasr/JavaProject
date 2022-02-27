@@ -61,7 +61,7 @@
                         <Insets right="20.0" />
                      </HBox.margin>
                   </Label>
-                  <ImageView fitHeight="42.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="42.0" fitWidth="104.0" onMouseClicked="#GoToUserPage" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@img/User.png" />
                      </image>
@@ -155,7 +155,7 @@
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </padding>
                         </HBox>
-                        <HBox alignment="CENTER" onMouseClicked="#GoToRecipe" prefHeight="27.0" prefWidth="212.0" spacing="10.0" styleClass="mouse-moved" stylesheets="@css/styles.css">
+                        <HBox alignment="CENTER" onMouseClicked="#GoToStorage" prefHeight="27.0" prefWidth="212.0" spacing="10.0" styleClass="mouse-moved" stylesheets="@css/styles.css">
                            <children>
                               <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                                  <image>

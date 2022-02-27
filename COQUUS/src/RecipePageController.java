@@ -5,6 +5,7 @@
  */
 
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -12,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.scene.input.MouseEvent;
 
 
 
@@ -37,6 +39,11 @@ public class RecipePageController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-    }    
+    } 
+    @FXML
+    public void goBack(MouseEvent event) throws IOException{
+        SceneController toR = new SceneController();
+        toR.switchToRecipeWindow(event);
+    }
     
 }

@@ -28,8 +28,30 @@ public class SceneController {
   stage.setScene(scene);
   stage.show();
  }
- public void switchToVegitablesPage(MouseEvent event) throws IOException {
-    Parent root = FXMLLoader.load(getClass().getResource("VegetablesWindow.fxml"));
+ public void switchToStoragePage(MouseEvent event) throws IOException {
+    Parent root = FXMLLoader.load(getClass().getResource("StorageWindow.fxml"));
+    stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+    scene = new Scene(root);
+    stage.setScene(scene);
+    stage.show();
+   }
+
+   public void switchToMainScene(MouseEvent event) throws IOException {
+    Parent root = FXMLLoader.load(getClass().getResource("MainScene.fxml"));
+    stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+    scene = new Scene(root);
+    stage.setScene(scene);
+    stage.show();
+   }
+   public void switchToUserPage(MouseEvent event) throws IOException {
+    Parent root = FXMLLoader.load(getClass().getResource("UserPage.fxml"));
+    stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+    scene = new Scene(root);
+    stage.setScene(scene);
+    stage.show();
+   }
+   public void switchToAddRecipePage(MouseEvent event) throws IOException {
+    Parent root = FXMLLoader.load(getClass().getResource("AddRecipepage.fxml"));
     stage = (Stage)((Node)event.getSource()).getScene().getWindow();
     scene = new Scene(root);
     stage.setScene(scene);

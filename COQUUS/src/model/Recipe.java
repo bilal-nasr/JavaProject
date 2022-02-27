@@ -6,7 +6,7 @@ public class Recipe {
     private String chef;
     private String description;
 
-    Recipe(String name,String imgscr,String chef,String description){
+    public Recipe(String name,String imgscr,String chef,String description){
         this.chef = chef;
         this.imgscr = imgscr;
         this.description = description;

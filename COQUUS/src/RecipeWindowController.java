@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import model.Recipe;
@@ -42,10 +43,16 @@ public class RecipeWindowController implements Initializable{
     }
     private List<Recipe> recipes(){
         List<Recipe> ls = new ArrayList<>();
-        Recipe recipe = new Recipe();
 
+        Recipe recipe = new Recipe("Name","img/Food/SpicyTomatodip.png","Zaynab","Hello");
+        ls.add(recipe);
         return ls;
         
     }
 
+    @FXML
+    public void goBack(MouseEvent event) throws IOException{
+        SceneController toR = new SceneController();
+        toR.switchToMainScene(event);
+    }
 }
