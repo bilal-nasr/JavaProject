@@ -3,19 +3,15 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
-
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
-import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 import model.Recipe;
 
 public class MainSceneController implements Initializable{
@@ -71,75 +67,6 @@ public class MainSceneController implements Initializable{
     private List<Recipe> RecentlyAdded(){
         List<Recipe> ls = new ArrayList<>();
         Recipe recipe = new Recipe();
-
-        recipe.setChef("UserName1");
-        recipe.setDescription("Hello This is my new recipe please chack it out...");
-        recipe.setName("Spicy Tomato");
-        recipe.setImgscr("/img/food/SpicyTomatodip.png");
-
-        ls.add(recipe);
-
-        recipe = new Recipe();
-
-        recipe.setChef("UserName1");
-        recipe.setDescription("Hello This is my new recipe please chack it out...");
-        recipe.setName("Spicy Tomato");
-        recipe.setImgscr("/img/food/SpicyTomatodip.png");
-
-        ls.add(recipe);
-
-        recipe = new Recipe();
-
-        recipe.setChef("UserName1");
-        recipe.setDescription("Hello This is my new recipe please chack it out...");
-        recipe.setName("Spicy Tomato");
-        recipe.setImgscr("/img/food/SpicyTomatodip.png");
-
-        ls.add(recipe);
-        recipe = new Recipe();
-
-        recipe.setChef("UserName1");
-        recipe.setDescription("Hello This is my new recipe please chack it out...");
-        recipe.setName("Spicy Tomato");
-        recipe.setImgscr("/img/food/SpicyTomatodip.png");
-
-        ls.add(recipe);
-
-        recipe = new Recipe();
-
-        recipe.setChef("UserName1");
-        recipe.setDescription("Hello This is my new recipe please chack it out...");
-        recipe.setName("Spicy Tomato");
-        recipe.setImgscr("/img/food/SpicyTomatodip.png");
-
-        ls.add(recipe);
-
-        recipe = new Recipe();
-
-        recipe.setChef("UserName1");
-        recipe.setDescription("Hello This is my new recipe please chack it out...");
-        recipe.setName("Spicy Tomato");
-        recipe.setImgscr("/img/food/SpicyTomatodip.png");
-
-        ls.add(recipe);
-
-        recipe = new Recipe();
-
-        recipe.setChef("UserName1");
-        recipe.setDescription("Hello This is my new recipe please chack it out...");
-        recipe.setName("Spicy Tomato");
-        recipe.setImgscr("/img/food/SpicyTomatodip.png");
-
-        ls.add(recipe);
-
-        recipe = new Recipe();
-
-        recipe.setChef("UserName1");
-        recipe.setDescription("Hello This is my new recipe please chack it out...");
-        recipe.setName("Spicy Tomato");
-        recipe.setImgscr("/img/food/SpicyTomatodip.png");
-
-        ls.add(recipe);
         return ls;
         
     }
@@ -148,92 +75,14 @@ public class MainSceneController implements Initializable{
         List<Recipe> ls = new ArrayList<>();
         Recipe recipe = new Recipe();
 
-        recipe.setChef("UserName1");
-        recipe.setDescription("Hello This is my new recipe please chack it out...");
-        recipe.setName("Spicy Tomato");
-        recipe.setImgscr("/img/food/SpicyTomatodip.png");
-
-        ls.add(recipe);
-
-        recipe = new Recipe();
-
-        recipe.setChef("UserName1");
-        recipe.setDescription("Hello This is my new recipe please chack it out...");
-        recipe.setName("Spicy Tomato");
-        recipe.setImgscr("/img/food/SpicyTomatodip.png");
-
-        ls.add(recipe);
-
-        recipe = new Recipe();
-
-        recipe.setChef("UserName1");
-        recipe.setDescription("Hello This is my new recipe please chack it out...");
-        recipe.setName("Spicy Tomato");
-        recipe.setImgscr("/img/food/SpicyTomatodip.png");
-
-        ls.add(recipe);
-        recipe = new Recipe();
-
-        recipe.setChef("UserName1");
-        recipe.setDescription("Hello This is my new recipe please chack it out...");
-        recipe.setName("Spicy Tomato");
-        recipe.setImgscr("/img/food/SpicyTomatodip.png");
-
-        ls.add(recipe);
-
-        recipe = new Recipe();
-
-        recipe.setChef("UserName1");
-        recipe.setDescription("Hello This is my new recipe please chack it out...");
-        recipe.setName("Spicy Tomato");
-        recipe.setImgscr("/img/food/SpicyTomatodip.png");
-
-        ls.add(recipe);
-
-        recipe = new Recipe();
-
-        recipe.setChef("UserName1");
-        recipe.setDescription("Hello This is my new recipe please chack it out...");
-        recipe.setName("Spicy Tomato");
-        recipe.setImgscr("/img/food/SpicyTomatodip.png");
-
-        ls.add(recipe);
-
-        recipe = new Recipe();
-
-        recipe.setChef("UserName1");
-        recipe.setDescription("Hello This is my new recipe please chack it out...");
-        recipe.setName("Spicy Tomato");
-        recipe.setImgscr("/img/food/SpicyTomatodip.png");
-
-        ls.add(recipe);
-
-        recipe = new Recipe();
-
-        recipe.setChef("UserName1");
-        recipe.setDescription("Hello This is my new recipe please chack it out...");
-        recipe.setName("Spicy Tomato");
-        recipe.setImgscr("/img/food/SpicyTomatodip.png");
-
-        ls.add(recipe);
         return ls;
     }
     
     @FXML
-    void GoToRecipe(MouseEvent event) {
-        Node node = (Node) event.getSource();
-        Stage stage = (Stage) node.getScene().getWindow();
-
-        //stage.setMaximized(true);
-        stage.close();
-        Scene scene;
-        try {
-            scene = new Scene(FXMLLoader.load(getClass().getResource("RecipeWindow.fxml")));
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-   
+    public void GoToRecipe(MouseEvent event) throws IOException {
+        SceneController toR = new SceneController();
+        toR.switchToRecipeWindow(event);
     }
+
+
 }

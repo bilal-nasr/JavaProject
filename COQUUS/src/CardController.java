@@ -1,4 +1,6 @@
 
+import java.io.IOException;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -25,14 +27,14 @@ public class CardController {
 
     private String[] colors = {"B9E5FF","BDB2FE","FF5856","eef"};
 
-    public void setData(Recipe recipe){
+
+    public void setData(Recipe recipe) throws IOException{
         Image image = new Image(getClass().getResourceAsStream(recipe.getImgscr()));
         CardImg.setImage(image);
- 
+        
         ChefName.setText(recipe.getChef());
         RecipeDescription.setText(recipe.getDescription());
         RecipeName.setText(recipe.getName());
-        
         if(i==colors.length){
             i=0;
         }
@@ -41,4 +43,5 @@ public class CardController {
         +"-fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 10);");
         i++;
     }
+
 }
